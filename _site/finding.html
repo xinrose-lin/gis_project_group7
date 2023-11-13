@@ -135,20 +135,58 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
+<div class="quarto-title-meta">    
 </div>
+
   
 
 </header>
+<h2>Flood Prone Areas & Evacuation Sites</h2>
+<img width="100%" src="./images/Flood Susceptibility of Derna 1.10.42 AM.png"></i>
 
-<p>Welcome to our GIS Project!</p>
-<p>hello</p>
+<p>
+  Taking into consideration the slope, elevation and proximity to waterways in Derna, the final map classifies the region into low, medium and high risk of flooding. 
+  The lightest shade of the blue has the lowest risks of flooding while the darkest shade of blue symbolises the highest risk. These factors are combined by AHP weights as follows:
+</p>
+<table>
+  <tr>
+    <th></th>
+    <th>Slope</th>
+    <th>Elevation</th>
+    <th>Distance to river</th>
+  </tr>
 
+  <tr>
+    <th>Slope</th>
+    <td>1</td>
+    <td>1/2</td>
+    <td>1/3</td>
+  </tr>
+  <tr>
+    <th>Elevation</th>
+    <td>2</td>
+    <td>1</td>
+    <td>1/3</td>
+  </tr>
+  <tr>
+    <th>Distance to river</th>
+    <td>3</td>
+    <td>3</td>
+    <td>1</td>
+  </tr>
 
+</table>
+
+<p>
+  The elevation in Derna is lower along the coast.  Therefore most of the coastal regions are medium or high risk flood zones. (>80%)
+</p>
+<p>
+  With the identified flood risk area, we identified 20 potential public facilities outside of high risk zones as potential evacuation sites
+</p>
+
+<h2>Service Area Coverage of Evacuation Sites</h2>
+
+<img src="./images/image9.png" width="100%"></img>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

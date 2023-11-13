@@ -20,6 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+
+.tab-content {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .tab-buttons {
+            display: flex;
+        }
+
+        .tab-buttons button {
+            flex: 1;
+            background-color: #f2f2f2;
+        }
+
+        .tab-buttons button.active {
+            background-color: #ddd;
+        }
 </style>
 
 
@@ -141,11 +162,57 @@ ul.task-list li input[type="checkbox"] {
   
 
 </header>
- <iframe src="https://3ddernamap.netlify.app/" width="800" height="600" frameborder="0"></iframe>
+<div class="tab-buttons">
+  <button onclick="openTab('tab1')" class="active">3D Map of Derna</button>
+  <button onclick="openTab('tab2')">2D Map (15 min)</button>
+  <button onclick="openTab('tab3')">2D Map (30 min)</button>
+  <button onclick="openTab('tab4')">Accessibility of Evacuation Sites</button>
+</div>
+
+<div id="tab1" class="tab-content active">
+  <h2>3D Map of Derna</h2>
+  <iframe src="https://3ddernamap.netlify.app/" width="100%" height="500" frameborder="0"></iframe>
+</div>
+
+<div id="tab2" class="tab-content">
+  <h2>2D Map of Derna (15 min)</h2>
+  <iframe src="https://2dmap15min.netlify.app/" width="100%" height="500" frameborder="0"></iframe>
+</div>
+
+<div id="tab3" class="tab-content">
+  <h2>2D Map of Derna (30 min)</h2>
+  <iframe src="https://2dmap30min.netlify.app/" width="100%" height="500" frameborder="0"></iframe>
+</div>
+
+<div id="tab4" class="tab-content">
+  <h2>Accessibility of Evacuation Sites</h2>
+  <iframe src="https://accessibilitymap.netlify.app" width="100%" height="500" frameborder="0"></iframe>
+</div>
 
 
 
 </main> <!-- /main -->
+<script>
+  document.getElementById("tab1").style.display = "block";
+
+  function openTab(tabName) {
+      // Hide all tabs and remove the 'active' class from buttons
+      var tabs = document.getElementsByClassName("tab-content");
+      for (var i = 0; i < tabs.length; i++) {
+          tabs[i].style.display = "none";
+      }
+
+      var buttons = document.getElementsByClassName("tab-buttons")[0].getElementsByTagName("button");
+      for (var i = 0; i < buttons.length; i++) {
+          buttons[i].classList.remove("active");
+      }
+
+      // Show the selected tab and highlight the corresponding button
+      document.getElementById(tabName).style.display = "block";
+      event.currentTarget.classList.add("active");
+  }
+</script>
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
