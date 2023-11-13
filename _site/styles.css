@@ -1,1 +1,31 @@
-/* css styles */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the navbar */
+.navbar {
+    background-color: #888; /* Use your preferred shade of grey */
+    overflow: hidden; /* Clear the floated elements inside the navbar */
+}
+
+/* Style for the navbar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: black; /* Change text color to black */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the color of the links on hover */
+.navbar a:hover {
+    background-color: #8c8c8c; /* Use a darker shade on hover */
+    color: rgb(255, 255, 255) !important; /* Change text color on hover if needed */
+}
+
+.navbar-title, .menu-text {
+    color: rgb(0, 0, 0) !important;
+}
