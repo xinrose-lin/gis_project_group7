@@ -82,10 +82,6 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./summary.html" rel="" target="">
- <span class="menu-text">Executive Summmary</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./proposal.html" rel="" target="">
  <span class="menu-text">Project Proposal</span></a>
   </li>  
@@ -221,6 +217,12 @@ This fits within the optimal time (30mins) suggested for emergency evacuation pl
 <p>In the worst case scenario of a flood, on average it is observed that population takes 1 hour and 13 minutes to reach nearest evacuation site. 
   The <b>longest time taken</b> to reach nearest evacuation site is around <b>3 hours and 20 mins</b>.</p>
 
+<p>
+  Based on population count, approximated with buildings count and averaged no of pax per building. 
+  Map of estimated high risk population demand for each evacuation site 
+  (based on count of buildings from nearest population region and estimate average population of 7 pax from one building.)
+</p>
+
 <h2>Recommendations</h2>
 <h3>Structural:</h3>
 <li>20 existing public facilities identified can converted as evacuation sites allowing majority of population in high risk zones to seek shelter within 30 mins and reach to majority of Derna’s population outside of flooded zones within 15mins. However, still not all population regions are covered. 
@@ -229,6 +231,75 @@ This fits within the optimal time (30mins) suggested for emergency evacuation pl
   <li>Flood evacuation warnings by planning authorities or humanitarian organisation is recommended to be given at least 3-4 hours in advance to reach most of the population in high flood risk zones. </li>
   <li>Residents ought to be informed of respective nearest evacuation centre to go to in times of a disaster based on service area map.</li>
   
+<h2>Extensions</h2>
+
+<h3>Flood Risk Analysis</h3>
+<li>Additional data (eg. regarding soil density [1]) around Derna’s geographical condition would support a more detailed analysis of Flood susceptibility in Derna. </li>
+<h3>Service Area Adequacy Analysis: (Supply perspective)</h3>
+<li>
+Does supply meet demand? Further analysis can be done for each individual service area, to understand its adequacy as an evacuation site and its sufficiency to meet population demand 
+</li>
+<li>
+Data on the capacity of these public facilities can be collected to better estimate the maximum number of people it can hold. 
+</li>
+<li>
+  Analysis on proximity to road networks for accessibility to rescue works, food, medical resources [3] will also provide insights on current suitability of the location as an evacuation site.
+</li>
+
+
+<h3>Accessibility analysis: (Demand perspective)</h3>
+<li><b>Terrain based analysis of accessibility can be explored:</b> With more fine-grained data on the urban land cover, possible Terrain analysis can be done to better analyse accessibility beyond road networks into the spatial context surrounding the population and the roads as explored in [5].</li>
+<br>
+<p>
+In addition, time based accessibility analysis can be improved with consideration of elevation as well. https://plugins.qgis.org/plugins/walkingtime/
+</p>
+<li>
+<b>Travel speed estimation:</b> Additionally, further research can be conducted to better understand the impact of flood disaster events on travel behaviour to provide a more contextually informed estimate of travel speed as explored by [7]
+</li>
+
+<li>
+  <b>Qualitative survey to understand “accessibility”:</b> For example, field studies can be done to understand changes in travel behaviours and preferences in the scenario of a disaster and what residents perceive as “accessible” as well as the factors that would affect their willingness to evacuate. For instance, [3] identified that residents generally prefer evacuation sites within 1km of their settlements.
+</li>
+
+<li>
+  <b>Weighted Accessibility scoring:</b> Further analysis on contributing factors to “accessibility” can be considered to create weighted score on spatial accessibility based on service capacity and population density of the area with reference to [4]. 
+</li>
+
+<br>
+
+<p>
+From a broader perspective, these insights can better inform insurance estimation of properties by considering these risk assessments. By consequence, with better awareness of these disaster risks amongst the population, it can better support the population's disaster preparedness and resilience.
+</p>
+
+<h4>References</h4>
+
+<ol >
+  <li>Flood risk and shelter suitability mapping using geospatial technique for sustainable urban flood management: a case study in Palembang city, South Sumatera, Indonesia
+    https://www.tandfonline.com/doi/pdf/10.1080/24749508.2023.2205717
+  </li>
+  <li>
+    https://www.mdpi.com/2220-9964/9/4/207
+    “The Central Disaster and Safety Countermeasures Headquarters and the National Emergency Management Agency of Korea have recommended a 30-minute emergency evacuation. Therefore, to extract the most feasible evacuation route, the routes with a total travel time of 30 min or less were selected as the optimal routes with optimal shelters. Thereafter, the optimal shelter was displaced based on the evacuation time, and the evacuation route was deformed according to the relocated shelter to create the flood evacuation map.”
+  </li>  
+  <li>
+    Adequacy of Flood Relief Shelters: A Case Study in Perak, Malaysia: https://www.e3s-conferences.org/articles/e3sconf/pdf/2018/09/e3sconf_cenviron2018_02016.pdf
+  </li>  
+  <li>
+    Health, place and Hanly: Modelling accessibility to hospitals in Ireland https://www.tandfonline.com/doi/abs/10.1080/00750770609555866
+    (“A weighted accessibility formula was applied to produce a measure of accessibility called a Spatial Accessibility Measure based on travel time, hospital size and population‐weighting.”)
+  </li>  
+  <li>
+    Flood evacuation and rescue: The identification of critical road segments using whole-landscape features https://www.sciencedirect.com/science/article/pii/S2590198219300223#f0035
+  </li>
+  <li>
+    Walking Speed of Flood-Disaster Evacuations in Various Surrounding Conditions
+    https://www.iahr.org/library/infor?pid=9379 (“The walking speed in the surrounding conditions was 30–50%lower than without the surrounding conditions”)
+  </li>
+  <li>
+    Changes in travel behavior during flood events in relation to transport modes: the case of Metro Manila, Philippines
+    https://www.sciencedirect.com/science/article/pii/S2352146520306189?ref=pdf_download&fr=RR-2&rr=825411a1f8454074
+  </li>
+</ol>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
