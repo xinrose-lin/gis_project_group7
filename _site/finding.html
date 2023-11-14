@@ -207,21 +207,54 @@ ul.task-list li input[type="checkbox"] {
 <h2>Accessibility of Potential Evacuation Sites from High Risk Flood Area</h2>
 <img src="./images/image10.png" width="100%"></img>
 <br>
-The above maps is an accessibility map of the population from high risk flood area (by buildings) to nearest evacuation centres (by time/distance) based on the classified walking speeds.</br></br>
+<p>
+The above map is an accessibility map of the population from high risk flood area (by buildings) to nearest evacuation centres (by time/distance) based on the classified walking speeds.
+</p>
+<p>To simulate the scenario of a flood scenario, we classified the roads into respective speed limit conditions with the follow assumptions:</p>
+<table>
+  <tr>
+    <th>High Flood Risk</th>
+    <td>Speed Limit = 1km/h</td>
+  </tr>
+  <tr>
+    <th>Medium Flood Risk &nbsp;</th>
+    <td>Speed Limit = 2km/h</td>
+  </tr>
+  <tr>
+    <th>Low Flood Risk</th>
+    <td>Speed Limit = 5km/h (average human walking speed)</td>
+  </tr>
+</table>
+<p>Speed estimations follow the assumption of a 30-50% reduction in travel speed due to flood conditions.</p>
+<p>
 Based on the histogram shown below, the mode of accessibility by time is around 30 minutes, suggesting that <b>the majority of the populated regions</b> is able to evacuate within 30 mins to these 20 existing potential evacuation sites. 
 This fits within the optimal time (30mins) suggested for emergency evacuation planning
-
 </p>
 <img src="./images/image6.png" width="100%"></img>
 
 <p>In the worst case scenario of a flood, on average it is observed that population takes 1 hour and 13 minutes to reach nearest evacuation site. 
   The <b>longest time taken</b> to reach nearest evacuation site is around <b>3 hours and 20 mins</b>.</p>
 
+<h3>Based on the accessibility map, what is the population demand (estimated number of people to hold) for each evacuation site?</h3>
+<img src="images/image101.png" width="100%">
 <p>
+  Bar plot of estimated population demand for each evacuation site based on total population estimated from nearest high risk population regions (hexagonal centroids) by time based OD Matrix Analysis.
+</p>
+<img src="images/image17.png" width="100%">
+<p>Map of estimated population demand for each evacuation site based on total population estimated from nearest high risk population regions (hexagonal centroids) by time based OD Matrix Analysis</p>
+
+<p>From the bar plot, we observe that the demand load for each evacuation site is rather unevenly distributed, where a few evacuation sites (ID 1 (university), 9 (mosque), and 18 (college)) are considered as nearest sites for a significantly high number of the population. Considering the approximate size of these buildings, it might be insufficient for the large demand.  
+  <b>Additional facilities will need to be identified or built to increase the supply of evacuation centres.</b>
+  <br><br>
+  Additionally, we observe that <b>evacuation site 5, 7, 17</b> does not seem to serve as a nearest evacuation site to any population region. This is as expected given their location being further away from the high risk zones. However, they can be considered for population regions that can reach them as second nearest sites so as to better distribute the demand load for the other sites.
+  Nevertheless, further analysis of the serving capacity of each evacuation site would be helpful to provide an effective distribution of demand across evacuation sites.
+  </p>
+
+<!-- <p>
   Based on population count, approximated with buildings count and averaged no of pax per building. 
   Map of estimated high risk population demand for each evacuation site 
   (based on count of buildings from nearest population region and estimate average population of 7 pax from one building.)
-</p>
+</p> -->
 
 <h2>Recommendations</h2>
 <h3>Structural:</h3>
